@@ -21,7 +21,8 @@
 ## 👨🏽‍💻Funcionamento:
 
 
-## ⚙️Montagem
+## ⚙️Exemplo de Montagem
+![exmontagem](https://github.com/user-attachments/assets/a94e70a1-08ff-4138-983f-fd2a015ab414)
 
 
 ## ❓Como instalar e rodar o projeto?
