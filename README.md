@@ -40,7 +40,7 @@
     - **O motor vai ser ativado e irá rodar na direção programada**
    
 ## 📽️ Vídeo no YouTube
-[![Video no youtube](https://github.com/user-attachments/assets/59f538c2-c4ec-4214-9a9e-d3ced6177c31)](https://youtu.be/GcmseL2E-LY)
+[![Video no youtube](https://github.com/user-attachments/assets/59f538c2-c4ec-4214-9a9e-d3ced6177c31)](https://youtu.be/wDkN8YJo5xQ)
 
 ## ⚙️Exemplo de Montagem(Simulador)
 - **Clique na imagem para acessar o simulador**
