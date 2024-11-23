@@ -1,0 +1,111 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C LCD(0x27, 16, 2);  
+
+int SensorTempPino = 0;
+
+int PinoVelocidade = 3;  
+int input1 = 6;  
+int input2 = 5;  
+
+byte grau[8] = { B00001100, B00010010, B00010010, B00001100, B00000000, B00000000, B00000000, B00000000 };
+byte casa[8] = { B00000000, B00000100, B00001110, B00011111, B00010001, B00010101, B00010101, B00011111 };
+
+float TemperaturaC = 0.0;
+float TemperaturaF = 0.0;
+
+int i = 0;  
+
+void setup() {
+  Serial.begin(9600);
+
+  LCD.init();
+  LCD.clear();  
+  LCD.backlight();  
+
+  LCD.createChar(0, grau);
+  LCD.createChar(1, casa);
+  
+  pinMode(PinoVelocidade, OUTPUT);
+  pinMode(input1, OUTPUT);
+  pinMode(input2, OUTPUT);
+
+  digitalWrite(input1, LOW);
+  digitalWrite(input2, LOW);
+}
+
+void loop() {
+  if (i == 0) {
+    i = 1;
+    Serial.println("Mudando para a tela de Temperatura...");
+    LCD.clear();  
+    delay(1000);  
+  } else {
+    i = 2;  
+    Serial.println("Mudando para a tela de Casa...");
+    LCD.clear();  
+    delay(1000); 
+  }
+
+  if (i == 1) {
+    telaCasa(); 
+  } else if (i == 2) {
+    telaTemperatura();  
+  }
+
+  int SensorTempTensao = analogRead(SensorTempPino);
+  float Tensao = SensorTempTensao * 5;
+  Tensao /= 1024;
+
+  TemperaturaC = (Tensao - 0.5) * 100;
+  TemperaturaF = (TemperaturaC * 9 / 5) + 32;
+
+  if (TemperaturaC < 15) {
+    analogWrite(PinoVelocidade, 100);  
+    digitalWrite(input1, LOW);        
+    digitalWrite(input2, HIGH);         
+    Serial.println("Motor girando para esquerda <<<");
+  } else if (TemperaturaC >= 15 && TemperaturaC < 25) {
+    analogWrite(PinoVelocidade, 0);    
+    digitalWrite(input1, LOW);          
+    digitalWrite(input2, LOW);          
+    Serial.println("Motor parado [ ]");
+  } else if (TemperaturaC >= 25) {
+    analogWrite(PinoVelocidade, 100);  
+    digitalWrite(input1, HIGH);
+    digitalWrite(input2, LOW);        
+    Serial.println("Motor girando para direita >>>");
+  }
+
+  delay(100);
+}
+
+void telaCasa() {
+  LCD.setCursor(5, 0);
+  LCD.print("Code");
+  LCD.setCursor(5, 1);
+  LCD.print("Nexus");
+  LCD.setCursor(1, 0);
+  LCD.write((byte)1);  
+  LCD.setCursor(13, 0);
+  LCD.write((byte)1);  
+  delay(3000);
+}
+
+void telaTemperatura() {
+  LCD.setCursor(0, 0);
+  LCD.print("Temp:");
+  LCD.setCursor(0, 1);
+  LCD.print(TemperaturaC, 1);  
+  LCD.setCursor(4, 1);
+  LCD.write((byte)0);  
+  LCD.setCursor(5, 1);
+  LCD.print("C");
+  LCD.setCursor(9, 1);
+  LCD.print(TemperaturaF, 1);  
+  LCD.write((byte)0);  
+  LCD.setCursor(14, 1);
+  LCD.print("F");
+  delay(3000);
+}
