@@ -1,4 +1,4 @@
-# Energia Verde - Global Solution🌍 - 1ESPA - Primeiro Semestre de 2024
+# ⚡ Energia Verde - Global Solution 🌍 - 1ESPA - Primeiro Semestre de 2024
 
 ## Professor: 
 - Professor Fábio Cabrini
@@ -38,6 +38,10 @@
     - **O motor será ou desligado ou continuará em repouso**
   - **Mais que 25ºC**
     - **O motor vai ser ativado e irá rodar na direção programada**
+   
+## 📽️ Vídeo no YouTube
+[![Video no youtube](https://github.com/user-attachments/assets/59f538c2-c4ec-4214-9a9e-d3ced6177c31)](https://youtu.be/GcmseL2E-LY)
+
 ## ⚙️Exemplo de Montagem
 ![exmontagem](https://github.com/user-attachments/assets/a94e70a1-08ff-4138-983f-fd2a015ab414)
 
