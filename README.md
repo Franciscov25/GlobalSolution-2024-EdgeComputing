@@ -45,6 +45,8 @@
 ## ⚙️Exemplo de Montagem
 ![exmontagem](https://github.com/user-attachments/assets/a94e70a1-08ff-4138-983f-fd2a015ab414)
 
+##📟Simulador
+[![Simulador tinkercad](https://www.tinkercad.com/things/lhgM9a9veY1-gs-edgecomputing)]
 
 ## ❓Como instalar e rodar o projeto?
 1. Conecte os fios e componentes conforme o esquema elétrico providenciado com a placa desconectada.
