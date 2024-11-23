@@ -19,6 +19,9 @@
 - **Motor CC**
 - **Acionador de motor**
 
+## Linguagem:
+- **Linguagem em C++** 
+ 
 ## 📍Pinagem:
 - **Sensor de temperatura TMP pino - A0**
 - **Acionamento do motor pino - 3**
