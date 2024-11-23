@@ -42,11 +42,10 @@
 ## 📽️ Vídeo no YouTube
 [![Video no youtube](https://github.com/user-attachments/assets/59f538c2-c4ec-4214-9a9e-d3ced6177c31)](https://youtu.be/GcmseL2E-LY)
 
-## ⚙️Exemplo de Montagem
-![exmontagem](https://github.com/user-attachments/assets/a94e70a1-08ff-4138-983f-fd2a015ab414)
+## ⚙️Exemplo de Montagem(Simulador)
+- **Clique na imagem para acessar o simulador**
+[![exmontagem](https://github.com/user-attachments/assets/a94e70a1-08ff-4138-983f-fd2a015ab414)](https://www.tinkercad.com/things/lhgM9a9veY1-gs-edgecomputing)
 
-##📟Simulador
-[![Simulador tinkercad](https://www.tinkercad.com/things/lhgM9a9veY1-gs-edgecomputing)]
 
 ## ❓Como instalar e rodar o projeto?
 1. Conecte os fios e componentes conforme o esquema elétrico providenciado com a placa desconectada.
